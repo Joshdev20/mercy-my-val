@@ -43,10 +43,20 @@ html{
   background:#ff4d6d;
   transform:scale(1.4);
 }
+
+/* Mobile height fix */
+section{
+  min-height:100vh;
+}
+@supports (-webkit-touch-callout: none) {
+  section{
+    min-height:-webkit-fill-available;
+  }
+}
 </style>
 </head>
 
-<body class="bg-gradient-to-br from-black via-rose-950 to-black text-white min-h-screen overflow-y-scroll snap-y snap-mandatory relative">
+<body class="bg-gradient-to-br from-black via-rose-950 to-black text-white overflow-x-hidden snap-y snap-mandatory relative">
 
 <!-- Floating Hearts -->
 <div id="hearts-container"></div>
@@ -65,7 +75,7 @@ html{
 </div>
 
 <!-- SECTION 1 -->
-<section id="home" class="h-screen snap-start flex flex-col justify-center items-center text-center px-6 relative">
+<section id="home" class="snap-start flex flex-col justify-center items-center text-center px-6 pt-24 pb-16 relative">
 
   <h1 class="text-6xl md:text-7xl text-pink-400 mb-6"
       style="font-family:'Great Vibes',cursive;">
@@ -97,7 +107,7 @@ html{
 </section>
 
 <!-- SECTION 2 -->
-<section id="letter" class="h-screen snap-start flex flex-col justify-center items-center text-center px-6">
+<section id="letter" class="snap-start flex flex-col justify-center items-center text-center px-6 pt-24 pb-16">
 
   <h2 class="text-4xl font-bold text-pink-400 mb-8">A Letter To You 💌</h2>
 
@@ -149,7 +159,7 @@ html{
 </section>
 
 <!-- SECTION 3 -->
-<section id="future" class="h-screen snap-start flex flex-col justify-center items-center text-center px-6">
+<section id="future" class="snap-start flex flex-col justify-center items-center text-center px-6 pt-24 pb-16">
 
   <h2 class="text-4xl font-bold text-pink-400 mb-6">Our Future 🌹</h2>
 
@@ -187,7 +197,7 @@ html{
 </section>
 
 <!-- SECTION 4 -->
-<section id="poem" class="h-screen snap-start flex flex-col justify-center items-center text-center px-6">
+<section id="poem" class="snap-start flex flex-col justify-center items-center text-center px-6 pt-24 pb-16">
 
   <h2 class="text-4xl font-bold text-pink-400 mb-8">A Poem For You 🌙</h2>
 
@@ -313,4 +323,4 @@ window.addEventListener("scroll", () => {
 </script>
 
 </body>
-  </html>
+    </html>
